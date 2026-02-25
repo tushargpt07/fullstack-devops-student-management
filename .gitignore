@@ -1,0 +1,17 @@
+# Mac
+.DS_Store
+
+# Node
+frontend/node_modules
+frontend/build
+
+# Java
+backend/target
+*.log
+
+# Docker
+*.tar
+
+# IDE
+.idea
+.vscode
