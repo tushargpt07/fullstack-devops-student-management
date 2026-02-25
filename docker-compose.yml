@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
 
   mysql:
@@ -15,7 +13,7 @@ services:
       - mysql_data:/var/lib/mysql
 
   backend:
-    build: ./backend
+    image: tushargpt07/student-backend:1.0
     container_name: backend
     restart: always
     ports:
@@ -28,7 +26,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: root
 
   frontend:
-    build: ./frontend
+    image: tushargpt07/student-frontend:1.0
     container_name: frontend
     restart: always
     ports:
