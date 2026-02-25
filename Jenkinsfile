@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/tushargpt07/fullstack-devops-student-management.git'
-            }
-        }
-
         stage('Build Docker Images') {
             steps {
                 sh 'docker build -t tushargpt07/student-backend:1.0 ./backend'
@@ -27,5 +21,3 @@ pipeline {
         }
     }
 }
-
-
