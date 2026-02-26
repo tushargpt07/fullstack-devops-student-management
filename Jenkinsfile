@@ -27,8 +27,8 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sshagent(['ec2-ssh-key']) {
-                    sh """
-                    ssh -o StrictHostKeyChecking=no ec2-user@3.6.94.247 '
+                    sh '''
+                    ssh -o StrictHostKeyChecking=no ec2-user@3.6.94.247 "
                         docker pull tushargpt07/student-backend:1.0 &&
                         docker pull tushargpt07/student-frontend:1.0 &&
                         docker stop backend || true &&
@@ -42,8 +42,8 @@ pipeline {
                           tushargpt07/student-backend:1.0 &&
                         docker run -d --name frontend -p 80:80 \
                           tushargpt07/student-frontend:1.0
-                    '
-                    """
+                    "
+                    '''
                 }
             }
         }
