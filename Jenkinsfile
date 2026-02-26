@@ -5,8 +5,8 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
-                sh 'docker build -t tushargpt07/student-backend:1.0 ./backend'
-                sh 'docker build -t tushargpt07/student-frontend:1.0 ./frontend'
+                sh 'docker build --platform linux/amd64 -t tushargpt07/student-backend:1.0 ./backend'
+                sh 'docker build --platform linux/amd64 -t tushargpt07/student-frontend:1.0 ./frontend'
             }
         }
 
