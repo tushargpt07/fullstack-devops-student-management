@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sshagent(['ec2-ssh-key']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@3.6.94.247 "
+                    ssh -o StrictHostKeyChecking=no ec2-user@13.235.19.139 "
                         docker pull tushargpt07/student-backend:1.0 &&
                         docker pull tushargpt07/student-frontend:1.0 &&
                         docker stop backend || true &&
