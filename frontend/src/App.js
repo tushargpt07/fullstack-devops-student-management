@@ -7,7 +7,7 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const API = "http://13.235.19.139:8080/api/students";
+  const API = "http://13.233.200.228:8080/api/students";
 
   const fetchStudents = async () => {
     const res = await axios.get(API);
